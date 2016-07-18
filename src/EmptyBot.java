@@ -12,6 +12,10 @@ public class EmptyBot extends JRobot2015_3 {
 	@Override
 	protected void actions() {
 		// TODO implement brain
+		Angle richtung = new Angle(30.0,"d");
+		double speed = 0.2;
+		this.setAutopilot(richtung, speed);
+		
 	}
 
 }
