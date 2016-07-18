@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/JRobots.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/JRobots-Competition/lib/JRobots.jar!/doc"/>
+			<attribute name="javadoc_location" value="jar:platform:/resource/jrobots-2016/lib/JRobots.jar!/doc"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
