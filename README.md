@@ -8,9 +8,9 @@
 | 10:15 |         |          |          | Schussstrategie |    "   |
 | 11:30 |         |          |          |       "         |    "   |
 | 13:15 |  Mittag |  Mittag  | Mittag   | Mittag          | Mittag |
-| 13:30 |  Einfuehrung | Intelligente Bewegung  | Stadtfuehrung | Turnier: 1v1, LMS | Mittag |
-| 14:00 |  Erste Schritte | Intelligente Bewegung  | Stadtfuehrung | Turnier: 1v1, LMS | Mittag |
-| 17:30 |  Abendessen | Abendessen | Abendessen | Abendessen | Abendessen |
+| 13:30 |  Einfuehrung | Intelligente Bewegung  | Stadtfuehrung | Turnier: 1v1, LMS | |
+| 14:00 |  Erste Schritte | " | Stadtfuehrung | " | |
+| 17:30 |  Abendessen | Abendessen | Abendessen | Abendessen | ||
 
 ## Installation: JRobots
 
