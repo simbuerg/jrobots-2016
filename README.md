@@ -12,7 +12,7 @@
 | 14:00 |  Erste Schritte | " | Stadtfuehrung | " | |
 | 17:30 |  Abendessen | Abendessen | Abendessen | Abendessen | ||
 
-## Installation: JRobots
+## Installation
 
 In einem Terminal eurer Wahl, fuehrt ihr folgende Befehle aus:
 ```
@@ -28,7 +28,7 @@ importiert werden. Im darauffolgenden Dialog waehlt ihr den Ordner `/home/<USERN
 aus und drueckt `OK`.
 Damit sollte ein neues Projekt mit dem Namen `jrobots-2016` erscheinen.
 
-## Start JRobots
+## Start
 
 Im Importierten Projekt findet ihr eine Datei `JRobots-Competition.launch`.
 JRobots wird via Rechtsklick und der Kontextoption:  
