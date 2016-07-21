@@ -29,7 +29,7 @@ public class Error404 extends JRobot2015_3 {
   private int haufigkeitRakete = 70; //100 ca. Energie 1;
   private boolean fire = true;
   //private int RaketenAusweichenWinkel = 45;
-  private int BoosterAbstandRakete = 30;
+  private int BoosterAbstandRakete = 40;
   private double BoosterAbEnergieBenutzen = 0.40;
   
   private double lastHealth = 100;
