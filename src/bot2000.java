@@ -19,8 +19,7 @@ public class bot2000 extends JRobot2015_3 {
 	private static final long serialVersionUID = 1L;
 
 	private double SCANENERGYLIMIT = 0.612;
-	//private double SCANENERGY = 0.08;
-
+	
 	private double speed = 0.5;//1.0
 	private int status = 0;
 	private SonarTrace oldScan = null;
@@ -35,9 +34,9 @@ public class bot2000 extends JRobot2015_3 {
 	private Vector lastPos = null;
 
 	public bot2000() {
-		this.setNameColor(Color.RED);
-		this.setBodyColor(Color.RED);
-		this.setTurretColor(Color.WHITE);
+		this.setNameColor(Color.red);
+		this.setBodyColor(Color.red);
+		this.setTurretColor(Color.red);
 	}
 	
 	enum Priority {
@@ -225,23 +224,20 @@ public class bot2000 extends JRobot2015_3 {
 		double health = this.getHealth();
 		if (health <= 0.70) {
 			speed = 1.0;
-			//SCANENERGY = 70.0;//0.18;
 			this.setBodyColor(Color.red);
-			this.setTurretColor(Color.pink);
+			this.setTurretColor(Color.red);
 			status = 1;
 
 			if (health <= 0.40) {
 				speed = 1.5;
-				//SCANENERGY = 0.70; //0.20;
-				this.setBodyColor(Color.cyan);
+				this.setBodyColor(Color.red);
 				this.setTurretColor(new Color(160, 40, 235));
 				status = 2;
 
 
 				if (health <= 0.20) {
 					speed = 1.5;
-					//SCANENERGY = 0.70;//0.27;
-					this.setBodyColor(Color.orange);
+					this.setBodyColor(Color.red);
 					status = 3;
 
 					if (this.getProjectileRadar() != null
@@ -254,9 +250,8 @@ public class bot2000 extends JRobot2015_3 {
 
 		} else {
 			speed = 0;
-			//SCANENERGY = 70.0;//0.18;
 			this.setBodyColor(Color.red);
-			this.setTurretColor(Color.pink);
+			this.setTurretColor(Color.red);
 			status = 0;
 		}
 	}
