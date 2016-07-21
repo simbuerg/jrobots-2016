@@ -31,7 +31,7 @@ public class ZaZa extends JRobot2015_2 {
       Vector scanPos = this.getLastSonarTrace().location.sub(this.getPosition());
       drawDebugTarget();
       // Anwender der Tor autokorrektur
-      this.setLaunchProjectileCommand(scanPos.getAngle().add(new Angle(90.0 ,"d")), scanPos.getLength() * 0.95);
+      this.setLaunchProjectileCommand(scanPos.getAngle().sub(new Angle(20.0 ,"d")), scanPos.getLength() * 0.95);
 
       this.oldScan = this.getLastSonarTrace();
     }
