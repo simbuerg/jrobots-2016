@@ -29,7 +29,7 @@ public class Error404 extends JRobot2015_3 {
   private int haufigkeitRakete = 70; //100 ca. Energie 1;
   private boolean fire = true;
   //private int RaketenAusweichenWinkel = 45;
-  private int BoosterAbstandRakete = 20;
+  private int BoosterAbstandRakete = 30;
   private double BoosterAbEnergieBenutzen = 0.40;
   
   private double lastHealth = 100;
@@ -231,7 +231,7 @@ public class Error404 extends JRobot2015_3 {
   }
   
   private int nah = 100;
-  private int weg = 70;
+  private int weg = 80;
   private int ok = 90;
   private void driveCircle(Vector v){
 	  driveCircle(v, 1);
@@ -244,8 +244,10 @@ public class Error404 extends JRobot2015_3 {
 	  Angle c = null;
 	  if(zuNah()){ 
 		  c = new Angle(nah, "d");
+		  speed = 1;
 	  }else if(zuWeitWeg()){
 		  c = new Angle(weg, "d");
+		  speed = 1; 
 	  }else{
 		  c = a.add(new Angle(ok, "d"));
 	  }
@@ -277,15 +279,10 @@ public class Error404 extends JRobot2015_3 {
 	  //double d = (double) i / 10;
 	  
 	  if(st[0] != null && oldPS != null){
-		  
-		  System.out.println("" + areWeFire);
-		  
 		  if((oldPS.pos.distanceTo(this.getPosition()) <= BoosterAbstandRakete || this.getEnergy() >= BoosterAbEnergieBenutzen) && areWeFire == false){			 
 			  if(aufDerLinie()){
 				  this.setBoost();
 				  
-				  System.out.println("BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOST");
-						
 				  return 1;
 			  }
 		  }
@@ -313,9 +310,11 @@ public class Error404 extends JRobot2015_3 {
 				 
 			double t = oldPS.pos.getY() - m * oldPS.pos.getX();
 				 
-			this.addDebugLine(new Vector(-1000, m*-1000 + t), new Vector(1000, m*1000 + t));
-				
-			return m*x + t;
+			if(m < Integer.MAX_VALUE && t < Integer.MAX_VALUE && m > Integer.MIN_VALUE && t > Integer.MIN_VALUE){
+				this.addDebugLine(new Vector(-1000, m*-1000 + t), new Vector(1000, m*1000 + t));
+			
+				return m*x + t;
+			}
 	  }
 	  
 	  return 0;
@@ -334,7 +333,7 @@ public class Error404 extends JRobot2015_3 {
 			 
 		double y = m * this.getPosition().getX() + t;
 		
-		if(m != 0){
+		if(m < Integer.MAX_VALUE && t < Integer.MAX_VALUE && m > Integer.MIN_VALUE && t > Integer.MIN_VALUE){		
 			this.addDebugLine(new Vector(-1000, m*-1000 + t), new Vector(1000, m*1000 + t));
 				 
 			if(st[0] != null && oldPS.pos.getX() > st[0].location.getX() && oldPS.pos.getX() > this.getPosition().getX() && oldPS.pos.getY() > st[0].location.getY() && oldPS.pos.getY() > this.getPosition().getY()){
